@@ -13,8 +13,10 @@
 	const optimum = 0.5;
 </script>
 
-<h1 class="text-3xl font-bold underline">Hello world!</h1>
-<ProgressBar {value} {min} {max} {optimum} />
+<div class="root w-screen flex items-center justify-center flex-col m-2 sm:m-0">
+	<h1 class="text-3xl font-bold underline">Hello world!</h1>
+	<ProgressBar {value} {min} {max} {optimum} />
+</div>
 
 <style lang="postcss">
 	:global(html) {

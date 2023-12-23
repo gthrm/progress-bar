@@ -3,4 +3,4 @@
 	export let preActive = false;
 </script>
 
-<div class="w-2 h-6 bg-white bg-opacity-40 rounded-[3px] sm:w-1.5 sm:h-5 sm:rounded-sm shadow" />
+<div class="bg-white bg-opacity-40 shadow sm:w-2 w-1.5 sm:h-6 h-5 sm:rounded-sm rounded-[3px]" />
