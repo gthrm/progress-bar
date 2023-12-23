@@ -1,5 +1,5 @@
 <script>
-	export let color = 'currentColor';
+	export let color = '#ffffff';
 	export let size = 24;
 </script>
 

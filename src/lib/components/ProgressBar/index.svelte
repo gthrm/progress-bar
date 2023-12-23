@@ -2,6 +2,7 @@
 	import BarItem from '$lib/components/BarItem/index.svelte';
 	import DarkIcon from '$lib/icons/Dark/index.svelte';
 	import LightIcon from '$lib/icons/Light/index.svelte';
+	import { createProgressBarItemsData } from '$lib/utilities/bar.utils';
 
 	const NUMBER_OF_ITEMS = 7;
 
@@ -10,11 +11,13 @@
 	export let max = 1;
 	export let optimum = 0.5;
 
-	const progressBarItemsData = new Array(NUMBER_OF_ITEMS).fill(true).map((_, i) => ({
-		id: i,
-		active: i / NUMBER_OF_ITEMS <= value,
-		preActive: i + 1 / NUMBER_OF_ITEMS <= value
-	}));
+	const progressBarItemsData = createProgressBarItemsData({
+		numberOfItems: NUMBER_OF_ITEMS,
+		value,
+		min,
+		max,
+		optimum
+	});
 
 	console.log('progressBarItemsData', progressBarItemsData);
 </script>
