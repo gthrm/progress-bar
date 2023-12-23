@@ -1,7 +1,23 @@
+<script lang="ts">
+	import { cubicOut } from 'svelte/easing';
+	import { tweened } from 'svelte/motion';
+	import ProgressBar from '$lib/components/ProgressBar/index.svelte';
+
+	const progress = tweened(0, {
+		duration: 400,
+		easing: cubicOut
+	});
+	const value = 0.5;
+	const min = 0;
+	const max = 1;
+	const optimum = 0.5;
+</script>
+
 <h1 class="text-3xl font-bold underline">Hello world!</h1>
+<ProgressBar {value} {min} {max} {optimum} />
 
 <style lang="postcss">
 	:global(html) {
-		background-color: theme(colors.gray.100);
+		background-color: theme(colors.neutral.700);
 	}
 </style>
