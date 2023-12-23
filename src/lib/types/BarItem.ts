@@ -1,5 +1,12 @@
+export enum BarItemStatus {
+    Active = 'active',
+    Prev = 'prev',
+    Current = 'current',
+    Next = 'next',
+    Inactive = 'inactive'
+}
+
 export interface IBarItem {
     id: number;
-    active: boolean;
-    preActive: boolean;
+    status: BarItemStatus;
 }

@@ -22,13 +22,15 @@
 	console.log('progressBarItemsData', progressBarItemsData);
 </script>
 
-<div class="w-[254px] h-[58px] p-2 rounded-lg border justify-center items-center gap-7 inline-flex">
+<div
+	class="sm:w-[254px] w-[230px] sm:h-[58px] h-[52px] sm:p-2 p-0 rounded-lg border justify-center items-center gap-7 inline-flex"
+>
 	<div class="w-8 h-8 p-1.5 justify-center items-center flex">
 		<DarkIcon />
 	</div>
 	<div class="justify-center items-center gap-2.5 flex">
-		{#each progressBarItemsData as { id, active, preActive } (id)}
-			<BarItem {active} {preActive} />
+		{#each progressBarItemsData as { id, status } (id)}
+			<BarItem {status} />
 		{/each}
 	</div>
 	<div class="w-8 h-8 p-1 justify-center items-center flex">
