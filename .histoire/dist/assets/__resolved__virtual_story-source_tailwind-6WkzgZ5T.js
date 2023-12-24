@@ -7179,6 +7179,4 @@ export default {
     },
   ],
 }`;
-export {
-  __resolved__virtual_storySource_tailwind as default
-};
+export { __resolved__virtual_storySource_tailwind as default };

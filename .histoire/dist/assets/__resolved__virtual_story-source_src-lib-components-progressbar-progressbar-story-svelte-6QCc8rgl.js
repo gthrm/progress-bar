@@ -28,6 +28,4 @@ const __resolved__virtual_storySource_srcLibComponentsProgressbarProgressbarStor
 	</Hst.Variant>
 </Hst.Story>;
 `;
-export {
-  __resolved__virtual_storySource_srcLibComponentsProgressbarProgressbarStorySvelte as default
-};
+export { __resolved__virtual_storySource_srcLibComponentsProgressbarProgressbarStorySvelte as default };

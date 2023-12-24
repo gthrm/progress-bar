@@ -13,7 +13,8 @@
 		"test": "vitest",
 		"story:dev": "histoire dev",
 		"story:build": "histoire build",
-		"story:preview": "histoire preview"
+		"story:preview": "histoire preview",
+		"prepare": "husky install"
 	},
 	"devDependencies": {
 		"@histoire/plugin-svelte": "^0.17.6",
@@ -31,6 +32,7 @@
 		"eslint-config-prettier": "^9.1.0",
 		"eslint-plugin-svelte": "^2.30.0",
 		"histoire": "^0.17.6",
+		"husky": "^8.0.3",
 		"jsdom": "^23.0.1",
 		"postcss": "^8.4.32",
 		"prettier": "^3.1.1",
