@@ -3,10 +3,9 @@
 	import { ANIMATION_DURATION } from '$lib/const';
 	import DarkIcon from '$lib/icons/Dark/index.svelte';
 	import LightIcon from '$lib/icons/Light/index.svelte';
-	import type { IBarItem } from '$lib/types/BarItem';
 	import { createProgressBarItemsData } from '$lib/utilities/bar.utils';
-	import { sineInOut } from 'svelte/easing';
-	import { tweened, type Tweened } from 'svelte/motion';
+	import { linear } from 'svelte/easing';
+	import { tweened } from 'svelte/motion';
 
 	export let value = 0;
 	export let min = 0;
@@ -14,11 +13,11 @@
 	export let optimum = 0.5;
 	export let numberOfItems = 7;
 
-	$: fullDuration = numberOfItems * ANIMATION_DURATION;
+	$: fullDuration = numberOfItems * (ANIMATION_DURATION / 2);
 
 	$: progress = tweened(0, {
 		duration: fullDuration,
-		easing: sineInOut
+		easing: linear
 	});
 
 	$: isLight = $progress >= optimum;
@@ -37,9 +36,9 @@
 </script>
 
 <div
-	class="sm:w-[254px] w-[230px] sm:h-[58px] h-[52px] sm:p-2 p-0 rounded-lg justify-center items-center gap-7 inline-flex"
+	class="sm:w-[254px] w-[230px] sm:h-[58px] h-[52px] p-2 rounded-lg justify-center items-center gap-6 sm:gap-7 inline-flex"
 >
-	<div class="w-8 h-8 p-1.5 justify-center items-center flex">
+	<div class="w-8 h-8 justify-center items-center flex">
 		<DarkIcon isActive={!isLight} />
 	</div>
 	<div class="justify-center items-center gap-2.5 flex">
