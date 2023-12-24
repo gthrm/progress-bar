@@ -14,7 +14,7 @@
 	const numberOfItems = 7;
 
 	let isSwitcherOn = false;
-	let isSettingsOpen = true;
+	let isSettingsOpen = false;
 	let isPlayingStarted = false;
 
 	const handlePlayAnimation = () => {
@@ -45,7 +45,7 @@
 	}
 </script>
 
-<div
+<section
 	class="root w-screen flex items-center justify-center flex-col sm:py-20 py-10 m-0 gap-8 min-h-[100dvh]"
 >
 	<ProgressBar {value} {min} {max} {optimum} {numberOfItems} />
@@ -75,6 +75,7 @@
 		value={isPlayingStarted ? 'Playing...' : 'Play'}
 		disabled={isPlayingStarted}
 	/>
+
 	<input
 		class="text-neutral-500 text-sm uppercase font-extrabold cursor-pointer"
 		type="button"
@@ -83,6 +84,7 @@
 		on:click={handleParamsMenuOpen}
 		value="Set Params"
 	/>
+
 	<SlideOutMenu bind:isOpen={isSettingsOpen} on:close={handleParamsMenuOpen}>
 		<div class="flex flex-col mx-4 gap-4 px">
 			<InputNumber
@@ -131,7 +133,7 @@
 			/>
 		</div>
 	</SlideOutMenu>
-</div>
+</section>
 
 <style lang="postcss">
 	:global(html) {
