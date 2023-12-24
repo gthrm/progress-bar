@@ -8,7 +8,7 @@
 	$: statusClass = getStatusClass({ status });
 </script>
 
-<div
-	class={`bg-white sm:w-2 w-1.5 sm:h-6 h-5 ${CUSTOM_CLASSES[statusClass]} rounded-sm sm:rounded-[3px]`}
+<span
+	class={`bg-white ${CUSTOM_CLASSES[statusClass]} rounded-sm sm:rounded-[3px]`}
 	style:transition={`all ${ANIMATION_DURATION}ms ease-out`}
 />
