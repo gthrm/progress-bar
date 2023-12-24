@@ -35,7 +35,8 @@
 
 	$: if (typeof value === 'number') {
 		const stepChange = Math.abs(value - currentValue);
-		const duration = stepChange * numberOfItems * BASE_DURATION;
+		const conditionalStepValue = stepChange / (max - min);
+		const duration = conditionalStepValue * numberOfItems * BASE_DURATION;
 
 		progress.set(value, { duration });
 		currentValue = value;
