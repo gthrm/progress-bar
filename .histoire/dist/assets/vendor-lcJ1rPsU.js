@@ -22765,7 +22765,7 @@ var C = {
 	ie: Ps,
 	ie_version: Ol ? yn.documentMode || 6 : kn ? +kn[1] : bn ? +bn[1] : 0,
 	gecko: Lr,
-	gecko_version: Lr ? +/* @__PURE__ */ (/Firefox\/(\d+)/.exec(vt.userAgent) || [0, 0])[1] : 0,
+	gecko_version: Lr ? +(/* @__PURE__ */ (/Firefox\/(\d+)/.exec(vt.userAgent) || [0, 0])[1]) : 0,
 	chrome: !!$s,
 	chrome_version: $s ? +$s[1] : 0,
 	ios: Nr,
@@ -22773,7 +22773,7 @@ var C = {
 	webkit: Er,
 	safari: Ml,
 	webkit_version: Er
-		? +/* @__PURE__ */ (/\bAppleWebKit\/(\d+)/.exec(navigator.userAgent) || [0, 0])[1]
+		? +(/* @__PURE__ */ (/\bAppleWebKit\/(\d+)/.exec(navigator.userAgent) || [0, 0])[1])
 		: 0,
 	tabSize: yn.documentElement.style.tabSize != null ? 'tab-size' : '-moz-tab-size'
 };
