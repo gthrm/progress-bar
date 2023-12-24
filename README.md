@@ -6,7 +6,7 @@ The `ProgressBar` component is a Svelte component designed to display an animate
 
 ## Demo
 
-- [View Demo](https://progress-bar.gthrm.io/)
+- [View Demo](https://gthrm.github.io/progress-bar)
 
 ## Features
 
