@@ -29,6 +29,6 @@ module.exports = {
 		}
 	],
 	rules: {
-		"no-import-assign": "warn"
+		'no-import-assign': 'warn'
 	}
 };
