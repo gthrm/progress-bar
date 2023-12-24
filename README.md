@@ -2,6 +2,8 @@
 
 ## Overview
 
+![screenshot](./screenshot.png)
+
 The `ProgressBar` component is a Svelte component designed to display an animated progress bar. It is fully customizable and responsive, making it suitable for a wide range of applications.
 
 ## Demo
