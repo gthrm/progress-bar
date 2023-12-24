@@ -30,7 +30,7 @@
 		numberOfItems
 	});
 
-	$: {
+	$: if (typeof value === 'number') {
 		progress.set(value);
 	}
 </script>
