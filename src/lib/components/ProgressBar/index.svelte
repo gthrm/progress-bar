@@ -35,10 +35,7 @@
 
 	$: if (typeof value === 'number') {
 		const stepChange = Math.abs(value - currentValue);
-		console.log('stepChange', stepChange);
-
 		const duration = stepChange * numberOfItems * BASE_DURATION;
-		console.log('duration', duration);
 
 		progress.set(value, { duration });
 		currentValue = value;
@@ -51,7 +48,7 @@
 	<div class="w-8 h-8 justify-center items-center flex">
 		<DarkIcon isActive={!isLight} />
 	</div>
-	<div class="justify-center items-center gap-2.5 flex">
+	<div class="sm:w-[118px] w-[102px] sm:h-[42px] h-[36px] justify-center items-center gap-2.5 flex">
 		{#each progressBarItemsData as { id, status } (id)}
 			<BarItem {status} />
 		{/each}
