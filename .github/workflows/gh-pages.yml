@@ -7,10 +7,14 @@ on:
 
 jobs:
   deploy:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
+    permissions:
+      contents: write
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
     strategy:
       matrix:
-        node-version: [18.x]
+        node-version: [latest]
     steps:
       - uses: actions/checkout@v3
       - name: Use Node.js ${{ matrix.node-version }}
@@ -18,14 +22,11 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
-      - name: Install pnpm
-        run: npm install -g pnpm
-
       - name: Install dependencies
-        run: pnpm install
+        run: npm install
 
       - name: Build pages
-        run: pnpm run build
+        run: npm run build
         env:
           GITALK_CLIENT_ID: ${{ secrets.GITALK_CLIENT_ID }}
           GITALK_SECRET: ${{ secrets.GITALK_SECRET }}

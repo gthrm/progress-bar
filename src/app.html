@@ -1,23 +1,27 @@
 <!doctype html>
 <html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
+		<link rel="stylesheet" href="%sveltekit.assets%/reset-css.css" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		%sveltekit.head%
+	</head>
 
-<head>
-	<meta charset="utf-8" />
-	<link rel="icon" href="%sveltekit.assets%/favicon.png" />
-	<link rel="stylesheet" href="%sveltekit.assets%/reset-css.css" />
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	%sveltekit.head%
-</head>
-
-<body data-sveltekit-preload-data="hover">
-	<main style="display: contents">%sveltekit.body%</main>
-	<footer class="absolute top-0 right-0 z-1 block w-[9em] h-[9em] overflow-hidden text-xl"
-		style="--color-blue: #4b86c2;">
-		<a href="https://github.com/gthrm/progress-bar" target="_blank" rel="noopener noreferrer" class=" absolute right-[-50%] bottom-[50%] left-[-50%] visible bg-[var(--color-blue)] text-white no-underline
-			text-center align-middle line-[2] origin-[50%_100%] rotate-45 py-1">
-			View me on github
-		</a>
-	</footer>
-</body>
-
+	<body data-sveltekit-preload-data="hover">
+		<main style="display: contents">%sveltekit.body%</main>
+		<footer
+			class="absolute top-0 right-0 z-1 block w-[9em] h-[9em] overflow-hidden text-xl"
+			style="--color-blue: #4b86c2"
+		>
+			<a
+				href="https://github.com/gthrm/progress-bar"
+				target="_blank"
+				rel="noopener noreferrer"
+				class="absolute right-[-50%] bottom-[50%] left-[-50%] visible bg-[var(--color-blue)] text-white no-underline text-center align-middle line-[2] origin-[50%_100%] rotate-45 py-1"
+			>
+				View me on github
+			</a>
+		</footer>
+	</body>
 </html>
