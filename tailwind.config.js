@@ -5,7 +5,12 @@ export default {
 		screens: {
 			sm: '320px',
 		},
-		extend: {}
+		extend: {
+			boxShadow: {
+				custom: '0px 0px 24px -2px #FFF, 0px 0px 6px -1px #FFF',
+			},
+
+		}
 	},
 	plugins: []
 };

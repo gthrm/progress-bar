@@ -4,7 +4,7 @@ import { BarItemStatus } from "$lib/types/BarItem";
 
 export function createProgressBarItemsData({ value, min, max, numberOfItems }: IProgressBar): IBarItem[] {
     const ratio = (value - min) / (max - min);
-    const currentIndex = Math.floor(ratio * numberOfItems);
+    const currentIndex = Math.round(ratio * (numberOfItems - 1));
     const prevIndex = currentIndex - 1;
     const nextIndex = currentIndex + 1;
 
