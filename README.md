@@ -1,38 +1,42 @@
-# create-svelte
+# ProgressBar Component
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
+## Overview
 
-## Creating a project
+The `ProgressBar` component is a Svelte component designed to display an animated progress bar. It is fully customizable and responsive, making it suitable for a wide range of applications.
 
-If you're seeing this, you've probably already done this step. Congrats!
+## Features
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+- Animated Progress: Smooth transitions for value changes.
+- Customizable Range: Set minimum and maximum values.
+- Optimum Value: Highlight an optimum value within the range.
+- Responsive: Adjusts to various screen sizes and contexts.
+- Accessibility: Built with accessibility in mind.
 
-# create a new project in my-app
-npm create svelte@latest my-app
+## Usage
+
+To implement the `ProgressBar` component in your project, use the following syntax:
+
+```svelte
+<ProgressBar {value} {min} {max} {optimum} />
 ```
 
-## Developing
+### Props
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+- `value`: The current progress value. Must be between `min` and `max`.
+- `min`: The minimum value (default is `0`).
+- `max`: The maximum value that can be reached (default is `100`).
+- `optimum`: The optimal value indicating the most favorable progress point.
 
-```bash
-npm run dev
+## Example
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+First, import the `ProgressBar` component:
+
+```svelte
+import ProgressBar from '$lib/components/ProgressBar/index.svelte';
 ```
 
-## Building
+Then, you can use it in your application like so:
 
-To create a production version of your app:
-
-```bash
-npm run build
+```svelte
+<ProgressBar value={50} min={0} max={100} optimum={75} />
 ```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
