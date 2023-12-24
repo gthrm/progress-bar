@@ -7,7 +7,7 @@ export function createProgressBarItemsData({
 	min,
 	max,
 	numberOfItems
-}: IProgressBar): IBarItem[] {
+}: Omit<IProgressBar, 'optimum'>): IBarItem[] {
 	const ratio = (value - min) / (max - min);
 	const currentIndex = Math.round(ratio * (numberOfItems - 1));
 	const prevIndex = currentIndex - 1;

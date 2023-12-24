@@ -26,7 +26,6 @@
 		value: $progress,
 		min,
 		max,
-		optimum,
 		numberOfItems
 	});
 
