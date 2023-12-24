@@ -14,7 +14,6 @@ The `ProgressBar` component is a Svelte component designed to display an animate
 - Customizable Range: Set minimum and maximum values.
 - Optimum Value: Highlight an optimum value within the range.
 - Responsive: Adjusts to various screen sizes and contexts.
-- Accessibility: Built with accessibility in mind.
 
 ## Usage
 
