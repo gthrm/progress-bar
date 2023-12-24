@@ -3,6 +3,7 @@
 	import SlideOutMenu from '$lib/components/SlideOutMenu/index.svelte';
 	import InputNumber from '$lib/components/InputNumber/index.svelte';
 	import Button from '$lib/components/Button/index.svelte';
+	import Checkbox from '$lib/components/Checkbox/index.svelte';
 
 	import { ANIMATION_DURATION } from '$lib/const';
 
@@ -49,25 +50,8 @@
 	class="root w-screen flex items-center justify-center flex-col sm:py-20 py-10 m-0 gap-8 min-h-[100dvh]"
 >
 	<ProgressBar {value} {min} {max} {optimum} {numberOfItems} />
-	<input
-		type="checkbox"
-		bind:checked={isSwitcherOn}
-		id="cb1-6"
-		class="hidden"
-		disabled={isPlayingStarted}
-	/>
-	<label
-		for="cb1-6"
-		class={`relative w-16 h-9 ${isPlayingStarted ? 'cursor-wait' : 'cursor-pointer'} rounded-full`}
-		class:bg-green-400={isSwitcherOn}
-		class:bg-gray-200={!isSwitcherOn}
-	>
-		<span
-			class={`absolute block  top-1 bg-white w-7 h-7 rounded-full shadow transition-transform duration-300 ${
-				isSwitcherOn ? 'translate-x-8' : 'left-1 translate-x-0'
-			}`}
-		></span>
-	</label>
+
+	<Checkbox bind:checked={isSwitcherOn} disabled={isPlayingStarted} />
 
 	<Button
 		inputName="play"

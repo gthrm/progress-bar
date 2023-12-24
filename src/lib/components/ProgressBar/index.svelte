@@ -13,7 +13,11 @@
 	export let optimum = 0.5;
 	export let numberOfItems = 7;
 
-	$: fullDuration = numberOfItems * (ANIMATION_DURATION / 2);
+	let currentValue = 0;
+
+	const BASE_DURATION = ANIMATION_DURATION / 2;
+
+	$: fullDuration = numberOfItems * BASE_DURATION;
 
 	$: progress = tweened(0, {
 		duration: fullDuration,
@@ -30,12 +34,19 @@
 	});
 
 	$: if (typeof value === 'number') {
-		progress.set(value);
+		const stepChange = Math.abs(value - currentValue);
+		console.log('stepChange', stepChange);
+
+		const duration = stepChange * numberOfItems * BASE_DURATION;
+		console.log('duration', duration);
+
+		progress.set(value, { duration });
+		currentValue = value;
 	}
 </script>
 
 <div
-	class="sm:w-[254px] w-[230px] sm:h-[58px] h-[52px] p-2 rounded-lg justify-center items-center gap-6 sm:gap-7 inline-flex"
+	class="bg-neutral-700 sm:w-[254px] w-[230px] sm:h-[58px] h-[52px] p-2 rounded-lg justify-center items-center gap-6 sm:gap-7 inline-flex"
 >
 	<div class="w-8 h-8 justify-center items-center flex">
 		<DarkIcon isActive={!isLight} />
