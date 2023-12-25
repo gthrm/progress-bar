@@ -6,7 +6,7 @@
 
 	export let itemsData: IBarItem[] = [];
 
-	let innerWidth = 0;
+	let innerWidth = 320;
 
 	$: isSmallScreen = innerWidth < SMALL_SCREEN_WIDTH;
 

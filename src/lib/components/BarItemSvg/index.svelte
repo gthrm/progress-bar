@@ -6,7 +6,7 @@
 	export let id = 0;
 	export let status: BarItemStatus = BarItemStatus.Inactive;
 
-	let innerWidth = 0;
+	let innerWidth = 320;
 
 	$: isSmallScreen = innerWidth < SMALL_SCREEN_WIDTH;
 
