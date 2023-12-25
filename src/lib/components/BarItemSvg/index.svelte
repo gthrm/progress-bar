@@ -32,7 +32,8 @@
 </g>
 
 <style>
-	g, rect {
+	g,
+	rect {
 		transition: all 350ms ease-out 30ms;
 	}
 </style>
