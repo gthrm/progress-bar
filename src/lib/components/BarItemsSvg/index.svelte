@@ -27,5 +27,5 @@
 			<BarItemSvg {id} {status} />
 		{/each}
 	</g>
-	<BarItemFilter />
+	<BarItemFilter width={svgWidth} height={svgHeight} />
 </svg>

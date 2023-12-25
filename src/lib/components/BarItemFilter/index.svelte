@@ -1,6 +1,6 @@
 <script>
-	export let width = 162;
-	export let height = 86;
+	export let width = 200;
+	export let height = 100;
 	export let id = 'shiny_filter';
 </script>
 
